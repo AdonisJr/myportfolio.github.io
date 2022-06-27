@@ -1,0 +1,296 @@
+$primary-color: #BDF2D5;
+$secondary-color: brown;
+html {
+    box-sizing: border-box;
+    background: black;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Heiti TC", 微軟正黑體, sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-dots {
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border: 2px solid brown;
+    border-radius: 50%;
+    list-style: none;
+    background: #c9d6de;
+    transition: all 0.3s;
+    &:not(:last-of-type) {
+        margin-bottom: 20px;
+    }
+    &:hover,
+    &.is-active {
+        transform: scale(1.8);
+        background: transparent;
+    }
+}
+
+.main {
+    #home {
+        position: relative;
+        display: flex;
+        height: 100vh;
+        background-color: white;
+        header {
+            position: relative;
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            .header-design {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                .col1 {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 50px;
+                    background-color: $secondary-color;
+                    img {
+                        width: 500px;
+                        border-radius: 5%;
+                        position: relative;
+                        border: 10px solid $primary-color;
+                    }
+                    .borderLeft {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 300px;
+                        height: 100%;
+                        background-color: $primary-color;
+                    }
+                }
+                .col2 {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 2rem;
+                    background-color: $secondary-color;
+                    h1 {
+                        font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        letter-spacing: 1rem;
+                        font-size: 40px;
+                        color: white;
+                    }
+                    #name {
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        letter-spacing: 1rem;
+                        font-size: 60px;
+                        color: black;
+                    }
+                    #info {
+                        font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        letter-spacing: 1rem;
+                        font-size: 25px;
+                        color: white;
+                    }
+                }
+            }
+            nav {
+                display: none;
+                top: 0;
+                left: 0;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                transition: 20s;
+                .container {
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(right, rgb(52, 31, 4), rgb(213, 225, 52));
+                    opacity: 0.8;
+                }
+                .navbar {
+                    width: 20%;
+                    min-width: 280px;
+                    height: 100%;
+                    background-color: #ffffff;
+                    .nav-header {
+                        padding: 10px;
+                        height: 25%;
+                        #closeNavbar {
+                            color: red;
+                            &:hover,
+                            &:active {
+                                svg:hover {
+                                    color: rgb(166, 76, 76);
+                                    transform: rotate(360deg);
+                                    transition: 1s;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .nav-body {
+                        font-size: 22px;
+                        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        ul {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            list-style-type: none;
+                            li {
+                                width: 100%;
+                                text-align: center;
+                                cursor: pointer;
+                                a {
+                                    padding: 20px 0;
+                                    display: block;
+                                    transition: 0.5s;
+                                    text-decoration: none;
+                                    color: black;
+                                    &:hover {
+                                        background-color: $secondary-color;
+                                        letter-spacing: 10px;
+                                        font-weight: bold;
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .showNavbar {
+                display: flex;
+                position: fixed;
+                justify-content: end;
+                width: 100%;
+                padding: 20px 30px;
+                #showNavbar {
+                    cursor: pointer;
+                    color: $primary-color;
+                    transition: 0.5s;
+                    &:hover,
+                    &:active {
+                        padding: 10px;
+                        width: 60px;
+                        height: 60px;
+                        right: -20px;
+                        top: -20px;
+                        background-color: hsl(0, 59%, 21%);
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    #about {
+        background-color: white;
+        height: 100vh;
+    }
+    #project {
+        background-color: white;
+        height: 100vh;
+    }
+    #contact {
+        background-color: white;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        #home {
+            position: relative;
+            display: flex;
+            height: 100vh;
+            background-color: white;
+            header {
+                position: relative;
+                display: flex;
+                width: 100%;
+                height: 100vh;
+                .header-design {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    height: auto;
+                    .col1 {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        padding-top: 20px;
+                        background-color: none;
+                        img {
+                            width: 100%;
+                            border-radius: 5%;
+                            position: relative;
+                            border: 5px solid $primary-color;
+                        }
+                        .borderLeft {
+                            display: none;
+                        }
+                    }
+                    .col2 {
+                        width: 100%;
+                        height: 50%;
+                        align-items: center;
+                        gap: 2rem;
+                        background-color: $secondary-color;
+                        h1 {
+                            margin-top: 30px;
+                            font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            letter-spacing: 1rem;
+                            font-size: 30px;
+                        }
+                        #name {
+                            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                            letter-spacing: 1rem;
+                            font-size: 35px;
+                            color: black;
+                        }
+                        #info {
+                            font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            letter-spacing: 1rem;
+                            font-size: 20px;
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        #about {
+            background-color: white;
+            height: 100vh;
+        }
+        #project {
+            background-color: white;
+            height: 100vh;
+        }
+        #contact {
+            background-color: white;
+            height: 100vh;
+        }
+    }
+}

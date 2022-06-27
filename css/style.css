@@ -1,0 +1,375 @@
+@charset "UTF-8";
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: black;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Heiti TC", 微軟正黑體, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-dots {
+  position: fixed;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border: 2px solid brown;
+  border-radius: 50%;
+  list-style: none;
+  background: #c9d6de;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.nav-dot:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.nav-dot:hover, .nav-dot.is-active {
+  -webkit-transform: scale(1.8);
+          transform: scale(1.8);
+  background: transparent;
+}
+
+.main #home {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background-color: white;
+}
+
+.main #home header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.main #home header .header-design {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main #home header .header-design .col1 {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px;
+  background-color: brown;
+}
+
+.main #home header .header-design .col1 img {
+  width: 500px;
+  border-radius: 5%;
+  position: relative;
+  border: 10px solid #BDF2D5;
+}
+
+.main #home header .header-design .col1 .borderLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #BDF2D5;
+}
+
+.main #home header .header-design .col2 {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  background-color: brown;
+}
+
+.main #home header .header-design .col2 h1 {
+  font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1rem;
+  font-size: 40px;
+  color: white;
+}
+
+.main #home header .header-design .col2 #name {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1rem;
+  font-size: 60px;
+  color: black;
+}
+
+.main #home header .header-design .col2 #info {
+  font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 1rem;
+  font-size: 25px;
+  color: white;
+}
+
+.main #home header nav {
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: 20s;
+  transition: 20s;
+}
+
+.main #home header nav .container {
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, right top, left top, from(#341f04), to(#d5e134));
+  background-image: linear-gradient(right, #341f04, #d5e134);
+  opacity: 0.8;
+}
+
+.main #home header nav .navbar {
+  width: 20%;
+  min-width: 280px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+.main #home header nav .navbar .nav-header {
+  padding: 10px;
+  height: 25%;
+}
+
+.main #home header nav .navbar .nav-header #closeNavbar {
+  color: red;
+}
+
+.main #home header nav .navbar .nav-header #closeNavbar:hover svg:hover, .main #home header nav .navbar .nav-header #closeNavbar:active svg:hover {
+  color: #a64c4c;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.main #home header nav .navbar .nav-body {
+  font-size: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main #home header nav .navbar .nav-body ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+}
+
+.main #home header nav .navbar .nav-body ul li {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main #home header nav .navbar .nav-body ul li a {
+  padding: 20px 0;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+  color: black;
+}
+
+.main #home header nav .navbar .nav-body ul li a:hover {
+  background-color: brown;
+  letter-spacing: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.main #home header .showNavbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  padding: 20px 30px;
+}
+
+.main #home header .showNavbar #showNavbar {
+  cursor: pointer;
+  color: #BDF2D5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main #home header .showNavbar #showNavbar:hover, .main #home header .showNavbar #showNavbar:active {
+  padding: 10px;
+  width: 60px;
+  height: 60px;
+  right: -20px;
+  top: -20px;
+  background-color: #551616;
+  border-radius: 50%;
+}
+
+.main #about {
+  background-color: white;
+  height: 100vh;
+}
+
+.main #project {
+  background-color: white;
+  height: 100vh;
+}
+
+.main #contact {
+  background-color: white;
+  height: 100vh;
+}
+
+@media screen and (max-width: 600px) {
+  .main #home {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    background-color: white;
+  }
+  .main #home header {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+  .main #home header .header-design {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .main #home header .header-design .col1 {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+    padding-top: 20px;
+    background-color: none;
+  }
+  .main #home header .header-design .col1 img {
+    width: 100%;
+    border-radius: 5%;
+    position: relative;
+    border: 5px solid #BDF2D5;
+  }
+  .main #home header .header-design .col1 .borderLeft {
+    display: none;
+  }
+  .main #home header .header-design .col2 {
+    width: 100%;
+    height: 50%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 2rem;
+    background-color: brown;
+  }
+  .main #home header .header-design .col2 h1 {
+    margin-top: 30px;
+    font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1rem;
+    font-size: 30px;
+  }
+  .main #home header .header-design .col2 #name {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 1rem;
+    font-size: 35px;
+    color: black;
+  }
+  .main #home header .header-design .col2 #info {
+    font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1rem;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .main #about {
+    background-color: white;
+    height: 100vh;
+  }
+  .main #project {
+    background-color: white;
+    height: 100vh;
+  }
+  .main #contact {
+    background-color: white;
+    height: 100vh;
+  }
+}
