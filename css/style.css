@@ -16,12 +16,13 @@ html {
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -webkit-tap-highlight-color: none;
 }
 
 .nav-dots {
   position: fixed;
   top: 50%;
-  left: 5%;
+  left: 1%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   margin: 0;
@@ -35,7 +36,7 @@ html {
   border: 2px solid brown;
   border-radius: 50%;
   list-style: none;
-  background: #c9d6de;
+  background: transparent;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -51,6 +52,7 @@ html {
 }
 
 .main #home {
+  display: block;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,7 +98,7 @@ html {
   width: 500px;
   border-radius: 5%;
   position: relative;
-  border: 10px solid #BDF2D5;
+  border: 10px solid #00cc99;
 }
 
 .main #home header .header-design .col1 .borderLeft {
@@ -105,7 +107,7 @@ html {
   left: 0;
   width: 300px;
   height: 100%;
-  background-color: #BDF2D5;
+  background-color: #00cc99;
 }
 
 .main #home header .header-design .col2 {
@@ -127,23 +129,55 @@ html {
 
 .main #home header .header-design .col2 h1 {
   font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  letter-spacing: 1rem;
+  letter-spacing: 0.5em;
   font-size: 40px;
   color: white;
 }
 
 .main #home header .header-design .col2 #name {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  letter-spacing: 1rem;
   font-size: 60px;
-  color: black;
+  color: #00cc99;
+  text-align: left;
+  letter-spacing: 0.2em;
 }
 
 .main #home header .header-design .col2 #info {
   font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  letter-spacing: 1rem;
   font-size: 25px;
   color: white;
+}
+
+.main #home header .header-design .col2 .scrolldown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 80px;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.main #home header .header-design .col2 .scrolldown img {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  cursor: default;
+}
+
+.main #home header .header-design .col2 .scrolldown img:hover {
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
 }
 
 .main #home header nav {
@@ -245,7 +279,7 @@ html {
 
 .main #home header .showNavbar #showNavbar {
   cursor: pointer;
-  color: #BDF2D5;
+  color: #00cc99;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -260,19 +294,344 @@ html {
   border-radius: 50%;
 }
 
+.main #project {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+
+.main #project .project-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40%;
+}
+
+.main #project .project-title img {
+  width: 30%;
+}
+
+.main #project .project-title h3 {
+  font-size: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: default;
+}
+
+.main #project .project-title h3:hover {
+  letter-spacing: 5px;
+}
+
+.main #project .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.main #project .container .box1,
+.main #project .container .box2,
+.main #project .container .box3 {
+  width: 30%;
+  height: 55%;
+  background-color: #00cc99;
+  padding: 10px;
+  color: brown;
+}
+
+.main #project .container img {
+  width: 100%;
+  border: solid 3px #00cc99;
+  border-radius: 10px;
+}
+
+.main #project .container h4 {
+  margin: 10px 0;
+}
+
+.main #project .container h5 {
+  margin: 10px 0;
+}
+
+.main #project .container h5 span {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  margin-right: 5px;
+  border-radius: 25px;
+}
+
+.main #project .container .box1 {
+  color: brown;
+  cursor: pointer;
+}
+
+.main #project .container .box1 h3 {
+  margin: 5px 0;
+  text-align: center;
+  background-color: brown;
+  color: #00cc99;
+  padding: 3px;
+  cursor: default;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main #project .container .box1 h3:hover {
+  letter-spacing: 3px;
+}
+
+.main #project .container .box2 h3 {
+  margin: 5px 0;
+  text-align: center;
+  background-color: brown;
+  color: #00cc99;
+  padding: 3px;
+  cursor: default;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main #project .container .box2 h3:hover {
+  letter-spacing: 3px;
+}
+
+.main #project .container .box3 h3 {
+  margin: 5px 0;
+  text-align: center;
+  background-color: brown;
+  color: #00cc99;
+  padding: 3px;
+  cursor: default;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.main #project .container .box3 h3:hover {
+  letter-spacing: 3px;
+}
+
 .main #about {
   background-color: white;
   height: 100vh;
 }
 
-.main #project {
-  background-color: white;
-  height: 100vh;
+.main #about .about-title {
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main #about .about-title h1 {
+  font-size: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: default;
+}
+
+.main #about .about-title h1:hover {
+  letter-spacing: 5px;
+}
+
+.main #about .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 60%;
+}
+
+.main #about .container .aboutText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 60%;
+  padding: 10%;
+}
+
+.main #about .container .aboutText h2 {
+  font-weight: normal;
+  padding: 10px 30px;
+}
+
+.main #about .container .aboutText h1 span {
+  background-color: #00cc99;
+}
+
+.main #about .container .aboutPic {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main #about .container .aboutPic img {
+  width: 100%;
+}
+
+.main #about .tech {
+  margin: 0 50px;
+}
+
+.main #about .tech h1 span {
+  margin-left: 10px;
 }
 
 .main #contact {
   background-color: white;
   height: 100vh;
+}
+
+.main #contact .contactTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20%;
+}
+
+.main #contact .contactTitle h1 {
+  font-size: 50px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: default;
+}
+
+.main #contact .contactTitle h1:hover {
+  letter-spacing: 5px;
+}
+
+.main #contact .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60%;
+  width: 100%;
+}
+
+.main #contact .container .contactText {
+  width: 60%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main #contact .container .contactText form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  gap: 10px;
+  padding: 30px;
+  background-color: #00cc99;
+}
+
+.main #contact .container .contactText form input {
+  padding: 10px;
+}
+
+.main #contact .container .contactText form textarea {
+  padding: 10px;
+}
+
+.main #contact .container .contactText form button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.main #contact .container .contactText .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  padding: 10px;
+}
+
+.main #contact .container .contactText .bottom a {
+  width: 50px;
+}
+
+.main #contact .container .contactText .bottom a svg {
+  color: brown;
+}
+
+.main #contact .container .contactPic {
+  width: 40%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.main #contact .container .contactPic img {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
@@ -281,7 +640,7 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 100vh;
+    min-height: 110vh;
     background-color: white;
   }
   .main #home header {
@@ -301,7 +660,7 @@ html {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    height: auto;
+    height: 50%;
   }
   .main #home header .header-design .col1 {
     width: 100%;
@@ -327,49 +686,233 @@ html {
     width: 100%;
     border-radius: 5%;
     position: relative;
-    border: 5px solid #BDF2D5;
+    border: 5px solid #00cc99;
   }
   .main #home header .header-design .col1 .borderLeft {
-    display: none;
+    width: 100%;
+    height: 40%;
   }
   .main #home header .header-design .col2 {
     width: 100%;
-    height: 50%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 2rem;
-    background-color: brown;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 0.5em;
   }
   .main #home header .header-design .col2 h1 {
-    margin-top: 30px;
-    font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    letter-spacing: 1rem;
-    font-size: 30px;
+    text-align: center;
   }
   .main #home header .header-design .col2 #name {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 1rem;
-    font-size: 35px;
-    color: black;
+    text-align: center;
   }
   .main #home header .header-design .col2 #info {
-    font-family: 'Ink Free', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    letter-spacing: 1rem;
-    font-size: 20px;
     text-align: center;
-    margin-bottom: 30px;
   }
-  .main #about {
-    background-color: white;
-    height: 100vh;
+  .main #home header .header-design .col2 .scrolldown {
+    padding-top: 0px;
   }
   .main #project {
     background-color: white;
-    height: 100vh;
+    width: 100%;
+    height: 200vh;
+  }
+  .main #project .project-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 30px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 200px;
+  }
+  .main #project .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 10px;
+    padding: 5px;
+  }
+  .main #project .container .box1,
+  .main #project .container .box2,
+  .main #project .container .box3 {
+    width: 100%;
+    height: 70%;
+    background-color: #00cc99;
+    padding: 10px;
+    color: brown;
+  }
+  .main #about {
+    background-color: white;
+    height: 120vh;
+    padding: 10px;
+  }
+  .main #about .about-title {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 200px;
+    height: 100px;
+  }
+  .main #about .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .main #about .container .aboutText {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 100%;
+    padding: 10%;
+  }
+  .main #about .container .aboutText h2 {
+    font-weight: normal;
+    padding: 10px 30px;
+  }
+  .main #about .container .aboutText h1 span {
+    background-color: #00cc99;
+  }
+  .main #about .container .aboutPic {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main #about .container .aboutPic img {
+    width: 100%;
+  }
+  .main #about .tech {
+    width: 90%;
+    margin: 10px;
+  }
+  .main #about .tech h1 {
+    font-size: 16px;
+  }
+  .main #about .tech h1 span {
+    margin-left: 0px;
   }
   .main #contact {
     background-color: white;
-    height: 100vh;
+    padding-top: 50vh;
+    height: 200vh;
+  }
+  .main #contact .contactTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 20%;
+  }
+  .main #contact .contactTitle h1 {
+    font-size: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    cursor: default;
+  }
+  .main #contact .contactTitle h1:hover {
+    letter-spacing: 5px;
+  }
+  .main #contact .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 10px;
+  }
+  .main #contact .container .contactText {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main #contact .container .contactText form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .main #contact .container .contactText .bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 60%;
+    padding: 10px;
+  }
+  .main #contact .container .contactText .bottom a {
+    width: 50px;
+  }
+  .main #contact .container .contactText .bottom a svg {
+    color: brown;
+  }
+  .main #contact .container .contactPic {
+    width: 100%;
+    height: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .main #contact .container .contactPic img {
+    width: 100%;
+  }
+  .nav-dot {
+    border: 2px solid black;
   }
 }

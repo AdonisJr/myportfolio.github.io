@@ -13,13 +13,13 @@ showNavbar.onclick = function() {
     nav.style.display = 'flex'
 }
 
+
 function windowResized() {
     let name = document.getElementById('name')
     if (window.innerWidth <= 600) {
         name.textContent = 'ADONIS'
     } else {
         name.textContent = 'ADONIS Jr SUICO'
-        name.style.fontSize = '60px'
     }
 }
 
